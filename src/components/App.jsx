@@ -2,6 +2,13 @@ import "../scss/App.scss"
 
 function App() {
 
+  const handleClick =(event)=> {
+    
+  }
+
+
+
+
   return ( 
   <div className="page">
     <header>
@@ -19,7 +26,7 @@ function App() {
       </section>
 
       <section>
-        <button className="dice">Lanzar Dado</button>
+        <button className="dice" onClick={handleClick}>Lanzar Dado</button>
         <div className="game-status">En curso</div>
       </section>
 
