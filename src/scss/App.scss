@@ -18,36 +18,6 @@ html {
     color: #fff;
 }
 
-.board {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    margin-bottom: 30px;
-}
-
-.cell {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border: lightgrey 0.2px solid;
-}
-
-.grogu {
-    font-size: 50px;
-    animation: bounce 0.5s infinite alternate;
-}
-
-@keyframes bounce {
-    to {
-        transform: translateY(-20%);
-    }
-}
 
 .dice {
     background-color: #fff;
