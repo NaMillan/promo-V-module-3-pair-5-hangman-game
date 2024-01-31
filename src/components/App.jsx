@@ -1,13 +1,39 @@
 import "../scss/App.scss"
 import Header from "./Header"
 import Board from "./Board"
-{/*import Grogu from "./Grogu"*/}
+import Dice from "./Dice"
+import GameStatus from "./GameStatus"
+import {useState} from "react"
 
 function App() {
 
-  const handleClick =(event)=> {
-    
-  }
+const [position, setPosition] = useState (0);
+const [cookie, setCookie] = useState (["🍪","🍪","🍪"]);
+const [egg, setEgg]  = useState (["🥚","🥚","🥚"]);
+const [frog, setFrog]  = useState (["🐸","🐸","🐸"]);
+
+const [result, setResult]  = useState ("")
+const [status, setStatus]  = useState ("")
+
+const getRandomNumber =(max)=> {
+return Math.ceil(Math.random() * max);
+
+}
+
+const rollDice =()=> {
+ const randomNumber = getRandomNumber(4);
+ if ( randomNumber === 4) {
+ setPosition(position+1);
+ } else if ( randomNumber ===  1) {
+ const newCookie = (cookie.slice(1))
+  setCookie(newCookie);
+} else if ( randomNumber ===  2) {
+  const newEgg = (egg.slice(1))
+   setEgg(newEgg);
+}  else if ( randomNumber ===  3) {
+  const newFrog = (frog.slice(1))
+   setFrog(newFrog);
+}
 
   return ( 
   <div className="page">
@@ -15,11 +41,8 @@ function App() {
     <main className="page">
     <Board/> 
    {/*<Grogu/>*/}
-
-      <section>
-        <button className="dice" onClick={handleClick}>Lanzar Dado</button>
-        <div className="game-status">En curso</div>
-      </section>
+    <Dice/>
+    <GameStatus/>
 
       <section className="goods-container">
         <div className="goods-item">🍪</div>
@@ -43,6 +66,6 @@ function App() {
   </div>
   )
 }
-
+}
 export default App
 
