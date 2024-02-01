@@ -1,7 +1,7 @@
 import "../scss/layout/gameStatus.scss"
-function GameStatus() {
+function GameStatus(status) {
   return (
-    <div className="game-status">En curso</div>
+    <div className="game-status">{status}</div>
   )
 }
 

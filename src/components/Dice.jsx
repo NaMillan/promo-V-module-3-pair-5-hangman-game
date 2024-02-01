@@ -2,12 +2,9 @@ import "../scss/layout/dice.scss"
 import GameStatus from "./GameStatus"
 
 function Dice() {
-
-
-
-    const handleClick =(event)=> {
-    
-    }
+  const handleClick = ()=> {
+    diceManagment() 
+  }
 
   return (
     <section>
