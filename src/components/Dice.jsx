@@ -1,14 +1,12 @@
 import "../scss/layout/dice.scss"
 import GameStatus from "./GameStatus"
 
-function Dice() {
-  const handleClick = ()=> {
-    diceManagment() 
-  }
+function Dice({rollDice}) {
+
 
   return (
     <section>
-    <button className="dice" onClick={handleClick}>Lanzar Dado</button>
+    <button className="dice" onClick={rollDice}>Lanzar Dado</button>
     <GameStatus/>
     </section>
   )
