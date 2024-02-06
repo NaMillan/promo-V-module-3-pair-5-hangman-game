@@ -46,13 +46,15 @@ const rollDice =()=> {
   <div className="page">
     <Header/>
     <main className="page">
-    <Board position = {position} /> 
+    <Board position={position} /> 
    {/*<Grogu/>*/}
     <Dice rollDice={rollDice}/>
     <GameStatus status={gameStatus}/>
 
-    <Mercancy/>
-     <Reset/>
+    <Mercancy cookie={[cookie]}/>
+    <Mercancy egg={[egg]}/>
+    <Mercancy frog={[frog]}/>
+    <Reset/>
     </main>
   </div>
   )
