@@ -51,9 +51,7 @@ const rollDice =()=> {
     <Dice rollDice={rollDice}/>
     <GameStatus status={gameStatus}/>
 
-    <Mercancy cookie={[cookie]}/>
-    <Mercancy egg={[egg]}/>
-    <Mercancy frog={[frog]}/>
+    <Mercancy cookie={cookie} egg={egg} frog={frog} />
     <Reset/>
     </main>
   </div>
